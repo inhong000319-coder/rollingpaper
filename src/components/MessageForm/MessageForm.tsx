@@ -10,7 +10,7 @@ function MessageForm({ onSubmit }: MessageFormProps) {
     const [author, setAuthor] = useState('');
     const [content, setContent] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.SubmitEvent) => {
         e.preventDefault();
         if (!author.trim() || !content.trim()) return;
 
@@ -35,7 +35,7 @@ function MessageForm({ onSubmit }: MessageFormProps) {
                         id="author-input"
                         className="message-form__input"
                         type="text"
-                        placeholder="이름을 입력하세요"
+                        placeholder="이름 또는 별명을 입력하세요"
                         value={author}
                         onChange={(e) => setAuthor(e.target.value)}
                         maxLength={20}
@@ -48,7 +48,7 @@ function MessageForm({ onSubmit }: MessageFormProps) {
                     <textarea
                         id="message-input"
                         className="message-form__textarea"
-                        placeholder="따뜻한 메시지를 남겨주세요"
+                        placeholder="따뜻한 메시지를 남겨주세요. 욕설 또는 비난 시 찾아냅니다.^^"
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                         rows={3}
