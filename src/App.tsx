@@ -53,8 +53,8 @@ function App() {
     <div className="app" id="app-root">
       <main className="app__container">
         <ProfileHeader
-          name="%이름%"
-          description="%자기소개%"
+          name="서인홍"
+          description="취업을 갈망하는 개발자지망생"
         />
         <MessageForm onSubmit={handleSubmit} />
         <MessageList messages={messages} loading={loading} />
